@@ -1,1202 +1,542 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ntokozo Ndumiso Khanyile | IT Professional Portfolio</title>
-    <meta name="description" content="IT Support Specialist | Cloud & Cybersecurity Enthusiast - Building Secure Systems, Solving Real Problems">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
+    <meta name="description" content="Ntokozo Khanyile - IT Professional Portfolio. Cybersecurity, Cloud Engineering, IT Support.">
+    <title>Ntokozo Khanyile | IT Professional Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#00d4ff',
-                        secondary: '#7c3aed',
-                        dark: '#0a0a0f',
-                        darker: '#050508',
-                        card: '#12121a',
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 5px #00d4ff, 0 0 10px #00d4ff' },
-                            '100%': { boxShadow: '0 0 20px #00d4ff, 0 0 30px #00d4ff' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body {
-            background-color: #0a0a0f;
-            color: #e2e8f0;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glass-card {
-            background: rgba(18, 18, 26, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .glass-hero {
-            background: rgba(10, 10, 15, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        }
-        
-        .skill-bar {
-            background: linear-gradient(90deg, #00d4ff 0%, #7c3aed 100%);
-            transition: width 1.5s ease-out;
-        }
-        
-        .cyber-grid {
-            background-image: 
-                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        
-        .terminal-cursor::after {
-            content: '|';
-            animation: blink 1s infinite;
-            color: #00d4ff;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
-        }
-        
-        .nav-blur {
-            background: rgba(10, 10, 15, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #0a0a0f;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #00d4ff, #7c3aed);
-            border-radius: 5px;
-        }
-        
-        .typing-effect {
-            overflow: hidden;
-            border-right: 2px solid #00d4ff;
-            white-space: nowrap;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #00d4ff }
-        }
-
-        /* Floating animation for hero elements */
-        .float-element {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .float-element-delayed {
-            animation: float 6s ease-in-out infinite;
-            animation-delay: 3s;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<base target="_blank">
 </head>
-<body class="font-sans antialiased overflow-x-hidden">
+<body>
+    <canvas id="particleCanvas"></canvas>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 nav-blur border-b border-white/5 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                        <span class="text-white font-bold text-lg font-mono">NK</span>
-                    </div>
-                    <span class="font-bold text-xl tracking-tight">Ntokozo<span class="text-primary">.dev</span></span>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Home</a>
-                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors">About</a>
-                    <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Skills</a>
-                    <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Projects</a>
-                    <a href="#education" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Education</a>
-                    <a href="#contact" class="px-6 py-2.5 bg-gradient-to-r from-primary to-secondary rounded-full text-sm font-semibold text-white hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:scale-105">
-                        Contact Me
+    <header id="navbar">
+        <nav>
+            <a href="#" class="logo">ntokozo<span>.dev</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <article class="hero-content">
+                <span class="hero-badge">
+                    <em>●</em> Available for opportunities
+                </span>
+                <h1>Hi, I'm <strong class="gradient-text">Ntokozo Khanyile</strong></h1>
+                <p class="hero-subtitle">Building Secure Systems. Solving Real Problems. Growing Every Day.</p>
+                <aside class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work →</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </aside>
+            </article>
+            <figure class="hero-visual">
+                <article class="hero-card">
+                    <header class="terminal-header">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                    </header>
+                    <pre class="terminal-body">
+<span class="cmd">$</span> <span class="output">whoami</span>
+<span class="output">ntokozo_khanyile</span>
+<span class="cmd">$</span> <span class="output">cat skills.txt</span>
+<span class="output">Cybersecurity | Cloud | IT Support</span>
+<span class="cmd">$</span> <span class="output">cat location.txt</span>
+<span class="output">Pretoria, South Africa</span>
+<span class="cmd">$</span> <span class="output">status --availability</span>
+<span class="output" style="color: var(--success);">● Open to opportunities</span>
+<span class="cmd">$</span> <span class="cursor"></span>
+                    </pre>
+                </article>
+            </figure>
+        </section>
+
+        <section id="about">
+            <header class="section-header">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">IT Professional & Security Enthusiast</h2>
+                <p class="section-desc">Passionate about building secure systems and solving complex technical challenges.</p>
+            </header>
+            <article class="about-grid">
+                <figure class="about-image">
+                    <article class="about-image-inner">
+                        <aside class="about-stats">
+                            <article class="stat-card">
+                                <strong class="stat-number">3+</strong>
+                                <p class="stat-label">Years Experience</p>
+                            </article>
+                            <article class="stat-card">
+                                <strong class="stat-number">10+</strong>
+                                <p class="stat-label">Projects Built</p>
+                            </article>
+                            <article class="stat-card">
+                                <strong class="stat-number">5+</strong>
+                                <p class="stat-label">Certifications</p>
+                            </article>
+                            <article class="stat-card">
+                                <strong class="stat-number">∞</strong>
+                                <p class="stat-label">Curiosity Level</p>
+                            </article>
+                        </aside>
+                    </article>
+                </figure>
+                <article class="about-content">
+                    <h3>Security First, Always Learning</h3>
+                    <p>As a passionate and versatile IT professional, I bring hands-on experience across Cloud Engineering, Cybersecurity, and Helpdesk Support.</p>
+                    <p>My journey began with an internship at <strong>Netcampus</strong>, where I gained real-world exposure to virtualization, network troubleshooting, security labs, and cloud deployments using AWS and Azure.</p>
+                    <p>I've built systems from the ground up—designing Python-based helpdesk tools, simulating penetration testing labs, and hosting static websites in the cloud. I thrive on solving problems, adapting to fast-paced environments, and collaborating with diverse teams.</p>
+                    <aside class="about-tags">
+                        <span class="tag">Penetration Testing</span>
+                        <span class="tag">Cloud Engineering</span>
+                        <span class="tag">Network Security</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">Active Directory</span>
+                        <span class="tag">Ethical Hacking</span>
+                    </aside>
+                </article>
+            </article>
+        </section>
+
+        <section id="skills" class="bg-alt">
+            <header class="section-header">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-desc">Comprehensive skill set spanning IT support, cloud infrastructure, and cybersecurity operations.</p>
+            </header>
+            <article class="skills-grid">
+                <article class="skill-category">
+                    <header class="skill-category-header">
+                        <span class="skill-icon">🔒</span>
+                        <h3>Cybersecurity</h3>
+                    </header>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Penetration Testing</span>
+                                <span class="skill-percent">85%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="85"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Vulnerability Scanning</span>
+                                <span class="skill-percent">90%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="90"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Network Security Monitoring</span>
+                                <span class="skill-percent">85%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="85"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Session Hijacking/Sidejacking</span>
+                                <span class="skill-percent">80%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="80"></span></span>
+                        </li>
+                    </ul>
+                    <aside class="skill-tags">
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Burp Suite</span>
+                    </aside>
+                </article>
+
+                <article class="skill-category">
+                    <header class="skill-category-header">
+                        <span class="skill-icon">☁️</span>
+                        <h3>Cloud & Infrastructure</h3>
+                    </header>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-percent">80%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="80"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Microsoft Azure</span>
+                                <span class="skill-percent">75%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="75"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Virtualization</span>
+                                <span class="skill-percent">85%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="85"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">System Administration</span>
+                                <span class="skill-percent">80%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="80"></span></span>
+                        </li>
+                    </ul>
+                    <aside class="skill-tags">
+                        <span class="skill-tag">VMware</span>
+                        <span class="skill-tag">VirtualBox</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Windows Server</span>
+                    </aside>
+                </article>
+
+                <article class="skill-category">
+                    <header class="skill-category-header">
+                        <span class="skill-icon">🛠️</span>
+                        <h3>IT Support & Operations</h3>
+                    </header>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Helpdesk Support</span>
+                                <span class="skill-percent">90%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="90"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Microsoft 365</span>
+                                <span class="skill-percent">90%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="90"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Active Directory</span>
+                                <span class="skill-percent">85%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="85"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Network Troubleshooting</span>
+                                <span class="skill-percent">85%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="85"></span></span>
+                        </li>
+                    </ul>
+                    <aside class="skill-tags">
+                        <span class="skill-tag">PowerShell</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">Git</span>
+                    </aside>
+                </article>
+
+                <article class="skill-category">
+                    <header class="skill-category-header">
+                        <span class="skill-icon">💻</span>
+                        <h3>Development</h3>
+                    </header>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">85%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="85"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percent">80%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="80"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">Bash Scripting</span>
+                                <span class="skill-percent">75%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="75"></span></span>
+                        </li>
+                        <li class="skill-item">
+                            <p class="skill-header">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percent">70%</span>
+                            </p>
+                            <span class="skill-bar"><span class="skill-progress" data-width="70"></span></span>
+                        </li>
+                    </ul>
+                    <aside class="skill-tags">
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">YAML</span>
+                        <span class="skill-tag">CLI</span>
+                        <span class="skill-tag">GitHub</span>
+                    </aside>
+                </article>
+            </article>
+        </section>
+
+        <section id="projects">
+            <header class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">Real-world applications and lab environments demonstrating technical expertise.</p>
+            </header>
+            <article class="projects-grid">
+                <article class="project-card">
+                    <figure class="project-image">⚙️</figure>
+                    <section class="project-content">
+                        <aside class="project-badges">
+                            <span class="project-badge">Automation</span>
+                            <span class="project-badge">IaC</span>
+                        </aside>
+                        <h3>Hybrid Server Automation</h3>
+                        <p>Automated server management using Ansible in a virtual lab environment. Managed both Linux and Windows servers with security configurations, user management, and infrastructure as code principles.</p>
+                        <aside class="project-tech">
+                            <span>Ansible</span>
+                            <span>Linux</span>
+                            <span>Windows Server</span>
+                            <span>YAML</span>
+                        </aside>
+                        <footer class="project-links">
+                            <a href="https://github.com/ntokozo2307" class="project-link" target="_blank" rel="noopener">View Code →</a>
+                        </footer>
+                    </section>
+                </article>
+
+                <article class="project-card">
+                    <figure class="project-image">🎫</figure>
+                    <section class="project-content">
+                        <aside class="project-badges">
+                            <span class="project-badge">Python</span>
+                            <span class="project-badge">Database</span>
+                        </aside>
+                        <h3>Helpdesk Ticketing System</h3>
+                        <p>Built a comprehensive IT support ticketing system using Python. Features ticket creation, assignment, tracking, and resolution workflow management with priority-based categorization.</p>
+                        <aside class="project-tech">
+                            <span>Python</span>
+                            <span>SQLite</span>
+                            <span>CLI</span>
+                        </aside>
+                        <footer class="project-links">
+                            <a href="https://github.com/ntokozo2307" class="project-link" target="_blank" rel="noopener">View Code →</a>
+                        </footer>
+                    </section>
+                </article>
+
+                <article class="project-card">
+                    <figure class="project-image">☁️</figure>
+                    <section class="project-content">
+                        <aside class="project-badges">
+                            <span class="project-badge">AWS</span>
+                            <span class="project-badge">Azure</span>
+                        </aside>
+                        <h3>Cloud Website Hosting</h3>
+                        <p>Deployed and hosted static websites using AWS S3 and Azure Static Web Apps. Implemented CDN configuration, custom domain setup, SSL certificates, and CI/CD pipelines.</p>
+                        <aside class="project-tech">
+                            <span>AWS S3</span>
+                            <span>Azure</span>
+                            <span>CI/CD</span>
+                            <span>SSL/TLS</span>
+                            <span>CDN</span>
+                        </aside>
+                        <footer class="project-links">
+                            <a href="https://github.com/ntokozo2307" class="project-link" target="_blank" rel="noopener">View Code →</a>
+                        </footer>
+                    </section>
+                </article>
+
+                <article class="project-card">
+                    <figure class="project-image">🔐</figure>
+                    <section class="project-content">
+                        <aside class="project-badges">
+                            <span class="project-badge">Security</span>
+                            <span class="project-badge">Lab</span>
+                        </aside>
+                        <h3>Cybersecurity Lab Simulation</h3>
+                        <p>Comprehensive penetration testing laboratory environment. Practiced vulnerability scanning, exploitation techniques, session hijacking, and network security monitoring in isolated environments.</p>
+                        <aside class="project-tech">
+                            <span>Kali Linux</span>
+                            <span>Metasploit</span>
+                            <span>Nmap</span>
+                            <span>Wireshark</span>
+                        </aside>
+                        <footer class="project-links">
+                            <a href="https://github.com/ntokozo2307/Sidejacking-with-Wireshark-lab" class="project-link" target="_blank" rel="noopener">Wireshark Lab →</a>
+                            <a href="https://github.com/ntokozo2307/session-hijacking-practicals" class="project-link" target="_blank" rel="noopener">Session Hijacking →</a>
+                        </footer>
+                    </section>
+                </article>
+            </article>
+        </section>
+
+        <section id="education" class="bg-alt">
+            <header class="section-header">
+                <span class="section-label">Background</span>
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-desc">Continuous learning and professional development journey.</p>
+            </header>
+            <article class="timeline">
+                <article class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <time class="timeline-date">2026 – Present</time>
+                    <article class="timeline-content">
+                        <h3>Advanced Technical Training</h3>
+                        <p class="institution">Dynamic DNA</p>
+                        <p>Computer Architecture, System Development — Advanced technical training in system architecture and software development methodologies.</p>
+                    </article>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <time class="timeline-date">2020 – 2026</time>
+                    <article class="timeline-content">
+                        <h3>Diploma in Information Technology</h3>
+                        <p class="institution">Tshwane University of Technology</p>
+                        <p>Networking & Computer Security specialization. Focused on Network Security and Infrastructure.</p>
+                    </article>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <time class="timeline-date">2019</time>
+                    <article class="timeline-content">
+                        <h3>Matric (Sciences)</h3>
+                        <p class="institution">Malandela Secondary School</p>
+                        <p>Mathematics, Physical Sciences, and IT fundamentals.</p>
+                    </article>
+                </article>
+            </article>
+
+            <article class="certs-grid">
+                <article class="cert-card">
+                    <span class="cert-icon">📜</span>
+                    <h4>Microsoft 365 Fundamentals</h4>
+                    <p>MS-900 Certification</p>
+                </article>
+                <article class="cert-card">
+                    <span class="cert-icon">🤖</span>
+                    <h4>Microsoft AI Fluency</h4>
+                    <p>Artificial Intelligence Fundamentals</p>
+                </article>
+                <article class="cert-card">
+                    <span class="cert-icon">🎨</span>
+                    <h4>Graphic Design Fundamentals</h4>
+                    <p>Visual Design Principles</p>
+                </article>
+                <article class="cert-card">
+                    <span class="cert-icon">💼</span>
+                    <h4>Soft Skills Development</h4>
+                    <p>Communication & Professional Skills</p>
+                </article>
+                <article class="cert-card">
+                    <span class="cert-icon">🏢</span>
+                    <h4>Netcampus Internship</h4>
+                    <p>Hands-on enterprise IT experience</p>
+                </article>
+            </article>
+        </section>
+
+        <section id="contact">
+            <header class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-desc">Open to internship opportunities, junior roles, and collaborative projects in IT Support, Cloud, and Cybersecurity.</p>
+            </header>
+            <article class="contact-grid">
+                <article class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in hearing about new opportunities, projects, or just having a chat about technology and security.</p>
+                    <aside class="contact-methods">
+                        <a href="tel:+27786371992" class="contact-method">
+                            <span class="contact-icon">📱</span>
+                            <article class="contact-details">
+                                <h4>Phone</h4>
+                                <span>078 637 1992</span>
+                            </article>
+                        </a>
+                        <a href="mailto:ntokozokhanyile99@gmail.com" class="contact-method">
+                            <span class="contact-icon">✉️</span>
+                            <article class="contact-details">
+                                <h4>Email</h4>
+                                <span>ntokozokhanyile99@gmail.com</span>
+                            </article>
+                        </a>
+                        <aside class="contact-method">
+                            <span class="contact-icon">📍</span>
+                            <article class="contact-details">
+                                <h4>Location</h4>
+                                <span>Pretoria, Gauteng, South Africa</span>
+                            </article>
+                        </aside>
+                        <a href="https://github.com/ntokozo2307" target="_blank" rel="noopener" class="contact-method">
+                            <span class="contact-icon">💻</span>
+                            <article class="contact-details">
+                                <h4>GitHub</h4>
+                                <span>github.com/ntokozo2307</span>
+                            </article>
+                        </a>
+                    </aside>
+                    <a href="#" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+                        Download CV 📄
                     </a>
-                </div>
-                
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-darker border-t border-white/5">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-primary hover:bg-white/5 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-primary hover:bg-white/5 rounded-md">About</a>
-                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-primary hover:bg-white/5 rounded-md">Skills</a>
-                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-primary hover:bg-white/5 rounded-md">Projects</a>
-                <a href="#education" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-primary hover:bg-white/5 rounded-md">Education</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium text-primary">Contact Me</a>
-            </div>
-        </div>
-    </nav>
+                </article>
+                <form class="contact-form" id="contactForm">
+                    <fieldset class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Job Opportunity" required>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
+                    <output class="form-status" id="formStatus"></output>
+                </form>
+            </article>
+        </section>
+    </main>
 
-    <!-- Hero Section with Glassmorphism -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center cyber-grid pt-20 overflow-hidden">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-slow float-element"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse-slow float-element-delayed"></div>
-            <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl float-element" style="animation-delay: 1.5s;"></div>
-            <div class="absolute bottom-1/3 left-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl float-element-delayed" style="animation-delay: 2s;"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <!-- Left Content with Glassmorphism -->
-                <div class="flex-1 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
-                    <!-- Glassmorphism Card Container -->
-                    <div class="glass-hero rounded-3xl p-8 md:p-12 inline-block w-full lg:w-auto">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm">
-                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                            <span class="text-sm font-mono text-gray-400">Available for opportunities</span>
-                        </div>
-                        
-                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-                            Hi, I'm <span class="gradient-text">Ntokozo<br>Khanyile</span>
-                        </h1>
-                        
-                        <div class="h-8 md:h-12 mb-6 overflow-hidden">
-                            <p class="text-lg md:text-2xl text-gray-400 font-mono terminal-cursor" id="typing-text"></p>
-                        </div>
-                        
-                        <p class="text-lg text-gray-400 max-w-xl mb-8 leading-relaxed">
-                            Building Secure Systems. Solving Real Problems. Growing Every Day.
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                            <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold text-white hover:shadow-2xl hover:shadow-primary/25 transition-all transform hover:scale-105 flex items-center justify-center gap-2">
-                                <i class="fas fa-rocket"></i>
-                                View My Work
-                            </a>
-                            <a href="#contact" class="px-8 py-4 border border-white/20 rounded-full font-semibold text-white hover:bg-white/5 transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
-                                <i class="fas fa-envelope"></i>
-                                Get In Touch
-                            </a>
-                        </div>
-                        
-                        <!-- Social Links -->
-                        <div class="flex justify-center lg:justify-start gap-4">
-                            <a href="https://github.com" target="_blank" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all transform hover:scale-110 backdrop-blur-sm">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all transform hover:scale-110 backdrop-blur-sm">
-                                <i class="fab fa-linkedin-in text-xl"></i>
-                            </a>
-                            <a href="mailto:ntokozokhanyile99@gmail.com" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all transform hover:scale-110 backdrop-blur-sm">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Content - Decorative Glass Cards -->
-                <div class="flex-1 hidden lg:block relative" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="relative w-full max-w-md mx-auto">
-                        <!-- Floating Glass Cards -->
-                        <div class="glass-hero rounded-2xl p-6 absolute -top-10 -right-10 w-64 transform rotate-6 hover:rotate-0 transition-transform duration-500">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i class="fas fa-shield-alt text-primary text-2xl"></i>
-                                <span class="font-bold">Cybersecurity</span>
-                            </div>
-                            <p class="text-sm text-gray-400">Penetration Testing & Vulnerability Assessment</p>
-                        </div>
-
-                        <div class="glass-hero rounded-2xl p-6 absolute top-20 -left-10 w-64 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i class="fas fa-cloud text-secondary text-2xl"></i>
-                                <span class="font-bold">Cloud Engineering</span>
-                            </div>
-                            <p class="text-sm text-gray-400">AWS & Azure Infrastructure</p>
-                        </div>
-
-                        <div class="glass-hero rounded-2xl p-6 absolute top-60 right-0 w-64 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i class="fas fa-headset text-green-400 text-2xl"></i>
-                                <span class="font-bold">IT Support</span>
-                            </div>
-                            <p class="text-sm text-gray-400">Helpdesk & System Administration</p>
-                        </div>
-
-                        <!-- Center Element -->
-                        <div class="glass-hero rounded-full w-48 h-48 mx-auto mt-32 flex items-center justify-center border-2 border-primary/30">
-                            <div class="text-center">
-                                <i class="fas fa-code text-4xl text-primary mb-2"></i>
-                                <p class="font-mono text-sm text-gray-400">Always Learning</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <a href="#about" class="text-gray-500 hover:text-primary transition-colors">
-                    <i class="fas fa-chevron-down text-2xl"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section - FIXED LAYOUT -->
-    <section id="about" class="py-24 relative bg-darker">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-sm font-mono text-primary mb-2 uppercase tracking-wider">About Me</h2>
-                <h3 class="text-4xl font-bold">IT Support Specialist | Cloud & Cybersecurity Enthusiast</h3>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-start">
-                <!-- Left Side - Security Card -->
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="relative">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-20"></div>
-                        <div class="relative glass-card rounded-2xl p-8 border border-white/10 h-full">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                                    <i class="fas fa-shield-alt text-3xl text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-2xl font-bold">Security First</h3>
-                                    <p class="text-gray-400">Cybersecurity Enthusiast</p>
-                                </div>
-                            </div>
-                            <div class="space-y-4 font-mono text-sm">
-                                <div class="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-white/5">
-                                    <i class="fas fa-check-circle text-primary"></i>
-                                    <span>Penetration Testing Labs</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-white/5">
-                                    <i class="fas fa-check-circle text-primary"></i>
-                                    <span>Vulnerability Assessment</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-white/5">
-                                    <i class="fas fa-check-circle text-primary"></i>
-                                    <span>Network Security Monitoring</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-white/5">
-                                    <i class="fas fa-check-circle text-primary"></i>
-                                    <span>Ethical Hacking Practices</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-white/5">
-                                    <i class="fas fa-check-circle text-primary"></i>
-                                    <span>Session Hijacking & Sidejacking</span>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                                <p class="text-xs text-primary font-mono">
-                                    <i class="fas fa-info-circle mr-2"></i>
-                                    All security skills practiced in ethical, authorized lab environments only
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Side - About Content -->
-                <div class="space-y-8" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="glass-card rounded-2xl p-8 border border-white/10">
-                        <h4 class="text-xl font-bold mb-4 text-primary">Who I Am</h4>
-                        <div class="space-y-4 text-gray-400 leading-relaxed">
-                            <p>
-                                As a passionate and versatile IT professional, I bring hands-on experience across <span class="text-primary font-semibold">Cloud Engineering</span>, <span class="text-primary font-semibold">Cybersecurity</span>, and <span class="text-primary font-semibold">Helpdesk Support</span>.
-                            </p>
-                            <p>
-                                My journey began with an internship at <strong class="text-white">Netcampus</strong>, where I gained real-world exposure to virtualization, network troubleshooting, security labs, and cloud deployments using AWS and Azure.
-                            </p>
-                            <p>
-                                I've built systems from the ground up—designing Python-based helpdesk tools, simulating penetration testing labs, and hosting static websites in the cloud. I thrive on solving problems, adapting to fast-paced environments, and collaborating with technical and non-technical teams alike.
-                            </p>
-                            <p>
-                                Whether it's supporting users through complex technical issues, configuring firewall rules, or provisioning infrastructure in the cloud, I bring curiosity, initiative, and a growth mindset to everything I do.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="glass-card rounded-xl p-6 border border-white/10 flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Location</p>
-                                <p class="font-semibold">Pretoria, Gauteng, South Africa</p>
-                            </div>
-                        </div>
-                        
-                        <div class="glass-card rounded-xl p-6 border border-white/10 flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-graduation-cap text-secondary text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Education</p>
-                                <p class="font-semibold">Diploma in IT (Networking & Security)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 relative cyber-grid">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-sm font-mono text-primary mb-2 uppercase tracking-wider">Expertise</h2>
-                <h3 class="text-4xl font-bold mb-4">Technical Skills</h3>
-                <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive skill set spanning IT support, cloud infrastructure, and cybersecurity operations.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cybersecurity Skills (Highlighted) -->
-                <div class="glass-card rounded-2xl p-6 border border-primary/30 hover-lift relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/20 transition-all"></div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                            <i class="fas fa-shield-virus text-2xl text-primary"></i>
-                        </div>
-                        <h4 class="text-xl font-bold">Cybersecurity</h4>
-                    </div>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Penetration Testing</span>
-                                <span class="text-sm text-primary">85%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Vulnerability Scanning</span>
-                                <span class="text-sm text-primary">90%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Session Hijacking/Sidejacking</span>
-                                <span class="text-sm text-primary">80%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Network Security Monitoring</span>
-                                <span class="text-sm text-primary">85%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cloud & Infrastructure -->
-                <div class="glass-card rounded-2xl p-6 border border-white/10 hover-lift" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
-                            <i class="fas fa-cloud text-2xl text-secondary"></i>
-                        </div>
-                        <h4 class="text-xl font-bold">Cloud & Infrastructure</h4>
-                    </div>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">AWS</span>
-                                <span class="text-sm text-secondary">80%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Microsoft Azure</span>
-                                <span class="text-sm text-secondary">75%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="75%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Virtualization</span>
-                                <span class="text-sm text-secondary">85%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">System Administration</span>
-                                <span class="text-sm text-secondary">80%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- IT Support & Administration -->
-                <div class="glass-card rounded-2xl p-6 border border-white/10 hover-lift" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
-                            <i class="fas fa-headset text-2xl text-green-400"></i>
-                        </div>
-                        <h4 class="text-xl font-bold">IT Support & Admin</h4>
-                    </div>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Microsoft 365</span>
-                                <span class="text-sm text-green-400">90%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Active Directory</span>
-                                <span class="text-sm text-green-400">85%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Helpdesk Support</span>
-                                <span class="text-sm text-green-400">90%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-300">Network Troubleshooting</span>
-                                <span class="text-sm text-green-400">85%</span>
-                            </div>
-                            <div class="w-full bg-white/10 rounded-full h-2">
-                                <div class="skill-bar h-2 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Programming & Scripting -->
-                <div class="glass-card rounded-2xl p-6 border border-white/10 hover-lift" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center">
-                            <i class="fas fa-code text-2xl text-yellow-400"></i>
-                        </div>
-                        <h4 class="text-xl font-bold">Programming</h4>
-                    </div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="flex items-center gap-2 p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fab fa-python text-yellow-400"></i>
-                            <span class="text-sm font-medium">Python</span>
-                        </div>
-                        <div class="flex items-center gap-2 p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fas fa-terminal text-gray-400"></i>
-                            <span class="text-sm font-medium">Bash</span>
-                        </div>
-                        <div class="flex items-center gap-2 p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fas fa-server text-blue-400"></i>
-                            <span class="text-sm font-medium">Ansible</span>
-                        </div>
-                        <div class="flex items-center gap-2 p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fab fa-html5 text-orange-400"></i>
-                            <span class="text-sm font-medium">HTML/CSS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools & Technologies -->
-                <div class="glass-card rounded-2xl p-6 border border-white/10 hover-lift md:col-span-2 lg:col-span-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center">
-                            <i class="fas fa-tools text-2xl text-pink-400"></i>
-                        </div>
-                        <h4 class="text-xl font-bold">Tools & Technologies</h4>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Wireshark</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Nmap</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Metasploit</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Burp Suite</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">VMware</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">VirtualBox</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Docker</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Git</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Linux</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Windows Server</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">Kali Linux</span>
-                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">PowerShell</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 relative bg-darker">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-sm font-mono text-primary mb-2 uppercase tracking-wider">Portfolio</h2>
-                <h3 class="text-4xl font-bold mb-4">Featured Projects</h3>
-                <p class="text-gray-400 max-w-2xl mx-auto">Real-world applications and lab environments demonstrating technical expertise.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1: Ansible Automation -->
-                <div class="group relative glass-card rounded-2xl overflow-hidden border border-white/10 hover-lift" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="p-8 relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-red-500/20 flex items-center justify-center">
-                                <i class="fas fa-cogs text-3xl text-red-400"></i>
-                            </div>
-                            <div class="flex gap-2">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">Automation</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">IaC</span>
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Hybrid Server Automation</h4>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Automated server management using Ansible in a virtual lab environment. Managed both Linux and Windows servers with security configurations, user management, and infrastructure as code principles.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-3 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">Ansible</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Linux</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Windows Server</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">YAML</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm text-gray-500">
-                            <span><i class="fas fa-shield-alt mr-2"></i>Security Hardening</span>
-                            <span><i class="fas fa-users mr-2"></i>User Management</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Python Helpdesk -->
-                <div class="group relative glass-card rounded-2xl overflow-hidden border border-white/10 hover-lift" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="p-8 relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-yellow-500/20 flex items-center justify-center">
-                                <i class="fab fa-python text-3xl text-yellow-400"></i>
-                            </div>
-                            <div class="flex gap-2">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">Python</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">Database</span>
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Helpdesk Ticketing System</h4>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Built a comprehensive IT support ticketing system using Python. Features ticket creation, assignment, tracking, and resolution workflow management with priority-based categorization.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Python</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">SQLite</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20">CLI</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm text-gray-500">
-                            <span><i class="fas fa-ticket-alt mr-2"></i>Ticket Management</span>
-                            <span><i class="fas fa-chart-line mr-2"></i>Analytics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Cloud Hosting -->
-                <div class="group relative glass-card rounded-2xl overflow-hidden border border-white/10 hover-lift" data-aos="fade-up" data-aos-delay="300">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="p-8 relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center">
-                                <i class="fas fa-cloud-upload-alt text-3xl text-blue-400"></i>
-                            </div>
-                            <div class="flex gap-2">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">AWS</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">Azure</span>
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Cloud Website Hosting</h4>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Deployed and hosted static websites using AWS S3 and Azure Static Web Apps. Implemented CDN configuration, custom domain setup, SSL certificates, and CI/CD pipelines for automated deployments.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">AWS S3</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Azure</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">CI/CD</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm text-gray-500">
-                            <span><i class="fas fa-lock mr-2"></i>SSL/TLS</span>
-                            <span><i class="fas fa-globe mr-2"></i>CDN</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Cybersecurity Lab -->
-                <div class="group relative glass-card rounded-2xl overflow-hidden border border-primary/30 hover-lift" data-aos="fade-up" data-aos-delay="400">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="absolute top-4 right-4">
-                        <span class="px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-xs font-bold text-primary animate-pulse">SECURITY FOCUSED</span>
-                    </div>
-                    <div class="p-8 relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center">
-                                <i class="fas fa-bug text-3xl text-primary"></i>
-                            </div>
-                            <div class="flex gap-2">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">Ethical Hacking</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">Lab</span>
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Cybersecurity Lab Simulation</h4>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Comprehensive penetration testing laboratory environment. Practiced vulnerability scanning, exploitation techniques, session hijacking, sidejacking, and network security monitoring in isolated, authorized environments.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Kali Linux</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">Metasploit</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20">Nmap</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Wireshark</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm text-gray-500">
-                            <span><i class="fas fa-search mr-2"></i>Vulnerability Scanning</span>
-                            <span><i class="fas fa-user-secret mr-2"></i>Penetration Testing</span>
-                        </div>
-                        <div class="mt-4 p-3 rounded-lg bg-primary/5 border border-primary/10">
-                            <p class="text-xs text-primary font-mono"><i class="fas fa-info-circle mr-2"></i>All activities conducted in controlled, authorized lab environments for educational purposes only</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section id="education" class="py-24 relative cyber-grid">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Education -->
-                <div data-aos="fade-right">
-                    <h2 class="text-sm font-mono text-primary mb-2 uppercase tracking-wider">Academic Background</h2>
-                    <h3 class="text-3xl font-bold mb-8">Education</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="glass-card rounded-xl p-6 border-l-4 border-primary border-y-0 border-r-0">
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="text-xl font-bold">Dynamic DNA</h4>
-                                <span class="text-sm font-mono text-primary">2026 – Present</span>
-                            </div>
-                            <p class="text-gray-400 mb-2">Computer Architecture, System Development</p>
-                            <p class="text-sm text-gray-500">Advanced technical training in system architecture and software development methodologies.</p>
-                        </div>
-                        
-                        <div class="glass-card rounded-xl p-6 border-l-4 border-secondary border-y-0 border-r-0">
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="text-xl font-bold">Tshwane University of Technology</h4>
-                                <span class="text-sm font-mono text-secondary">2020 – 2026</span>
-                            </div>
-                            <p class="text-gray-400 mb-2 font-semibold">Diploma in Information Technology</p>
-                            <p class="text-sm text-gray-500 mb-3">Networking & Computer Security specialization</p>
-                            <div class="flex gap-2">
-                                <span class="text-xs px-2 py-1 rounded bg-secondary/10 text-secondary border border-secondary/20">Network Security</span>
-                                <span class="text-xs px-2 py-1 rounded bg-secondary/10 text-secondary border border-secondary/20">Infrastructure</span>
-                            </div>
-                        </div>
-                        
-                        <div class="glass-card rounded-xl p-6 border-l-4 border-gray-500 border-y-0 border-r-0">
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="text-xl font-bold">Malandela Secondary School</h4>
-                                <span class="text-sm font-mono text-gray-400">2019</span>
-                            </div>
-                            <p class="text-gray-400">Matric (Sciences)</p>
-                            <p class="text-sm text-gray-500">Mathematics, Physical Sciences, and IT fundamentals</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certifications -->
-                <div data-aos="fade-left">
-                    <h2 class="text-sm font-mono text-primary mb-2 uppercase tracking-wider">Professional Development</h2>
-                    <h3 class="text-3xl font-bold mb-8">Certifications</h3>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="glass-card rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-all group">
-                            <div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fab fa-microsoft text-2xl text-blue-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-1">Microsoft 365 Fundamentals</h4>
-                            <p class="text-sm text-gray-500">MS-900</p>
-                        </div>
-                        
-                        <div class="glass-card rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-all group">
-                            <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-brain text-2xl text-purple-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-1">Microsoft AI Fluency</h4>
-                            <p class="text-sm text-gray-500">Artificial Intelligence Fundamentals</p>
-                        </div>
-                        
-                        <div class="glass-card rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-all group">
-                            <div class="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-palette text-2xl text-pink-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-1">Graphic Design Fundamentals</h4>
-                            <p class="text-sm text-gray-500">Visual Design Principles</p>
-                        </div>
-                        
-                        <div class="glass-card rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-all group">
-                            <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-comments text-2xl text-green-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-1">Soft Skills Development</h4>
-                            <p class="text-sm text-gray-500">Communication & Professional Skills</p>
-                        </div>
-                    </div>
-
-                    <!-- Internship Highlight -->
-                    <div class="mt-8 glass-card rounded-xl p-6 border border-primary/30 bg-gradient-to-r from-primary/5 to-transparent">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-briefcase text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg mb-2">Netcampus Internship</h4>
-                                <p class="text-gray-400 text-sm leading-relaxed">
-                                    Gained hands-on experience in virtualization, network troubleshooting, security labs, and cloud deployments. Worked with enterprise-grade infrastructure and security tools in a professional IT environment.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 relative bg-darker">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-sm font-mono text-primary mb-2 uppercase tracking-wider">Get In Touch</h2>
-                <h3 class="text-4xl font-bold mb-4">Let's Work Together</h3>
-                <p class="text-gray-400 max-w-2xl mx-auto">Open to internship opportunities, junior roles, and collaborative projects in IT Support, Cloud, and Cybersecurity.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Info -->
-                <div class="space-y-8" data-aos="fade-right">
-                    <div class="glass-card rounded-2xl p-8 border border-white/10">
-                        <h4 class="text-2xl font-bold mb-6">Contact Information</h4>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-envelope text-primary"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-500 mb-1">Email</p>
-                                    <a href="mailto:ntokozokhanyile99@gmail.com" class="text-lg font-medium hover:text-primary transition-colors">ntokozokhanyile99@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-phone text-secondary"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-500 mb-1">Phone</p>
-                                    <p class="text-lg font-medium">078 637 1992</p>
-                                    <p class="text-lg font-medium">065 527 8456</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-green-400"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-500 mb-1">Location</p>
-                                    <p class="text-lg font-medium">Pretoria, Gauteng</p>
-                                    <p class="text-sm text-gray-500">South Africa</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 pt-8 border-t border-white/10">
-                            <p class="text-sm text-gray-500 mb-4">Connect with me</p>
-                            <div class="flex gap-4">
-                                <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CV Download -->
-                    <div class="glass-card rounded-2xl p-8 border border-primary/30 bg-gradient-to-r from-primary/5 to-transparent" data-aos="zoom-in">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
-                                <i class="fas fa-file-download text-2xl text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold">Download My CV</h4>
-                                <p class="text-sm text-gray-400">Get the full details of my experience</p>
-                            </div>
-                        </div>
-                        <button onclick="downloadCV()" class="w-full py-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-semibold text-white hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
-                            <i class="fas fa-download"></i>
-                            Download Resume (PDF)
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="glass-card rounded-2xl p-8 border border-white/10" data-aos="fade-left">
-                    <h4 class="text-2xl font-bold mb-6">Send Message</h4>
-                    <form id="contact-form" class="space-y-6" onsubmit="handleSubmit(event)">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-400 mb-2">First Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="John">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-400 mb-2">Last Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Doe">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="john@example.com">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
-                                <option value="" class="bg-dark">Select a topic</option>
-                                <option value="job" class="bg-dark">Job Opportunity</option>
-                                <option value="internship" class="bg-dark">Internship</option>
-                                <option value="project" class="bg-dark">Project Collaboration</option>
-                                <option value="other" class="bg-dark">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                            <textarea rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Tell me about the opportunity..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-semibold text-white hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-darker border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                        <span class="text-white font-bold text-sm font-mono">NK</span>
-                    </div>
-                    <span class="font-bold text-lg">Ntokozo Khanyile</span>
-                </div>
-                
-                <p class="text-gray-500 text-sm">
-                    © 2026 Ntokozo Ndumiso Khanyile. All rights reserved.
-                </p>
-                
-                <div class="flex gap-6 text-sm text-gray-400">
-                    <a href="#home" class="hover:text-primary transition-colors">Home</a>
-                    <a href="#about" class="hover:text-primary transition-colors">About</a>
-                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
-                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <article class="footer-content">
+            <aside class="social-links">
+                <a href="https://github.com/ntokozo2307" target="_blank" rel="noopener" class="social-link" title="GitHub">GH</a>
+                <a href="#" class="social-link" title="LinkedIn">in</a>
+                <a href="#" class="social-link" title="Twitter">X</a>
+                <a href="mailto:ntokozokhanyile99@gmail.com" class="social-link" title="Email">@</a>
+            </aside>
+            <p class="footer-text">
+                Built with passion by <a href="#">Ntokozo Khanyile</a> © 2026. All rights reserved.
+            </p>
+        </article>
     </footer>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-5 right-5 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
-        <div class="glass-card rounded-lg px-6 py-4 border border-primary/30 flex items-center gap-3 shadow-2xl">
-            <i class="fas fa-check-circle text-primary text-xl"></i>
-            <span id="toast-message" class="font-medium">Message sent successfully!</span>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS Animation Library
-        AOS.init({
-            once: true,
-            offset: 100,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Typing Effect
-        const text = "IT Support Specialist | Cloud & Cybersecurity Enthusiast";
-        const typingElement = document.getElementById('typing-text');
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < text.length) {
-                typingElement.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-        
-        // Start typing after page load
-        setTimeout(typeWriter, 500);
-
-        // Skill Bar Animation on Scroll
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillBars = entry.target.querySelectorAll('.skill-bar');
-                    skillBars.forEach(bar => {
-                        const width = bar.getAttribute('data-width');
-                        bar.style.width = width;
-                    });
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('#skills .glass-card').forEach(card => {
-            observer.observe(card);
-        });
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                navbar.classList.add('shadow-lg');
-                navbar.classList.add('shadow-black/50');
-            } else {
-                navbar.classList.remove('shadow-lg');
-                navbar.classList.remove('shadow-black/50');
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form Submission Handler
-        function handleSubmit(e) {
-            e.preventDefault();
-            showToast('Message sent successfully! I\'ll get back to you soon.');
-            e.target.reset();
-        }
-
-        // CV Download Handler
-        function downloadCV() {
-            // Create a professional CV content
-            const cvContent = `
-NTOKOZO NDUMISO KHANYILE
-IT Support Specialist | Cloud & Cybersecurity Enthusiast
-Pretoria, Gauteng, South Africa
-Email: ntokozokhanyile99@gmail.com | Phone: 078 637 1992 / 065 527 8456
-
-PROFESSIONAL SUMMARY
-Passionate IT professional with hands-on experience in Cloud Engineering, Cybersecurity, and Helpdesk Support. 
-Skilled in AWS/Azure, penetration testing, network security, and automation. Proven ability to build secure 
-systems and solve complex technical problems.
-
-CORE COMPETENCIES
-• Cybersecurity: Penetration Testing, Vulnerability Scanning, Session Hijacking, Network Security Monitoring
-• Cloud: AWS, Azure, Infrastructure as Code, Virtualization
-• IT Support: Microsoft 365, Active Directory, Helpdesk Operations, System Administration
-• Programming: Python, Bash, Ansible
-
-PROFESSIONAL EXPERIENCE
-Netcampus - IT Intern
-• Gained real-world exposure to virtualization and network troubleshooting
-• Participated in security labs and cloud deployment projects
-• Developed technical documentation and support procedures
-
-TECHNICAL PROJECTS
-• Hybrid Server Automation: Automated Linux/Windows server management using Ansible
-• Helpdesk System: Built Python-based IT support ticketing system
-• Cloud Website Hosting: Deployed static websites on AWS S3 and Azure
-• Cybersecurity Lab: Conducted penetration testing and vulnerability assessments
-
-EDUCATION
-• Dynamic DNA (2026-Present): Computer Architecture, System Development
-• Tshwane University of Technology (2020-2026): Diploma in IT (Networking & Computer Security)
-• Malandela Secondary School (2019): Matric (Sciences)
-
-CERTIFICATIONS
-• Microsoft 365 Fundamentals
-• Microsoft AI Fluency
-• Graphic Design Fundamentals
-• Soft Skills Development
-
-Available for internships and junior roles in IT Support, Cloud Engineering, and Cybersecurity.
-            `;
-            
-            const blob = new Blob([cvContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Ntokozo_Khanyile_CV.txt';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
-            
-            showToast('CV downloaded successfully!');
-        }
-
-        // Toast Notification
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toast-message');
-            toastMessage.textContent = message;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
