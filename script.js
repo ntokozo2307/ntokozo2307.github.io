@@ -224,3 +224,188 @@ window.addEventListener('scroll', () => {
 window.addEventListener('beforeunload', () => {
     cancelAnimationFrame(animationId);
 });
+// ===============================
+// WEATHER + GEOLOCATION
+// ===============================
+
+const weatherInfo = document.getElementById("weatherInfo");
+const weatherIcon = document.getElementById("hero-weather-icon");
+
+async function loadWeather() {
+
+    if (!navigator.geolocation) {
+        weatherInfo.textContent =
+            "Geolocation is not supported by your browser";
+        return;
+    }
+
+    weatherInfo.textContent = "Getting your location...";
+
+    navigator.geolocation.getCurrentPosition(
+        async position => {
+
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            try {
+
+                // Current weather
+                const weatherResponse = await fetch(
+                    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code`
+                );
+
+                const weatherData = await weatherResponse.json();
+
+                // Reverse geocoding
+                const geoResponse = await fetch(
+                    `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+                );
+
+                const geoData = await geoResponse.json();
+
+                const location =
+                    geoData.address.city ||
+                    geoData.address.town ||
+                    geoData.address.village ||
+                    geoData.address.suburb ||
+                    "Unknown Location";
+
+                const temperature =
+                    Math.round(weatherData.current.temperature_2m);
+
+                const weatherCode =
+                    weatherData.current.weather_code;
+
+                const weatherDescription =
+                    getWeatherDescription(weatherCode);
+
+                weatherInfo.innerHTML =
+                    `
+                    📍 ${location}<br>
+                    🌡️ ${temperature}°C · ${weatherDescription}
+                    `;
+
+                updateWeatherIcon(weatherCode);
+
+            } catch (error) {
+
+                console.error(error);
+
+                weatherInfo.textContent =
+                    "Unable to load weather data";
+            }
+        },
+
+        error => {
+
+            console.error(error);
+
+            switch (error.code) {
+
+                case error.PERMISSION_DENIED:
+                    weatherInfo.textContent =
+                        "Location permission denied";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    weatherInfo.textContent =
+                        "Location unavailable";
+                    break;
+
+                case error.TIMEOUT:
+                    weatherInfo.textContent =
+                        "Location request timed out";
+                    break;
+
+                default:
+                    weatherInfo.textContent =
+                        "Unable to get location";
+            }
+        }
+    );
+}
+
+// Weather descriptions
+function getWeatherDescription(code) {
+
+    const weatherCodes = {
+
+        0: "Clear Sky",
+
+        1: "Mainly Clear",
+        2: "Partly Cloudy",
+        3: "Overcast",
+
+        45: "Fog",
+        48: "Rime Fog",
+
+        51: "Light Drizzle",
+        53: "Drizzle",
+        55: "Heavy Drizzle",
+
+        61: "Light Rain",
+        63: "Rain",
+        65: "Heavy Rain",
+
+        71: "Light Snow",
+        73: "Snow",
+        75: "Heavy Snow",
+
+        80: "Rain Showers",
+        81: "Heavy Showers",
+        82: "Violent Showers",
+
+        95: "Thunderstorm",
+        96: "Thunderstorm & Hail",
+        99: "Severe Thunderstorm"
+    };
+
+    return weatherCodes[code] || "Unknown";
+}
+
+// Update icon
+function updateWeatherIcon(code) {
+
+    if (!weatherIcon) return;
+
+    if (code === 0) {
+        weatherIcon.className = "fas fa-sun";
+    }
+
+    else if ([1, 2].includes(code)) {
+        weatherIcon.className = "fas fa-cloud-sun";
+    }
+
+    else if (code === 3) {
+        weatherIcon.className = "fas fa-cloud";
+    }
+
+    else if ([45, 48].includes(code)) {
+        weatherIcon.className = "fas fa-smog";
+    }
+
+    else if (
+        [51,53,55,61,63,65,80,81,82].includes(code)
+    ) {
+        weatherIcon.className = "fas fa-cloud-rain";
+    }
+
+    else if (
+        [71,73,75].includes(code)
+    ) {
+        weatherIcon.className = "fas fa-snowflake";
+    }
+
+    else if (
+        [95,96,99].includes(code)
+    ) {
+        weatherIcon.className = "fas fa-bolt";
+    }
+
+    else {
+        weatherIcon.className = "fas fa-cloud-sun";
+    }
+}
+
+// Load weather after page loads
+window.addEventListener("load", loadWeather);
