@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <base target="_blank">
 </head>
 <body>
     <canvas id="particleCanvas"></canvas>
 
     <header id="navbar">
-        <nav>
+        <nav>""
             <a href="#" class="logo">ntokozo<span>.dev</span></a>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
             <ul class="nav-links" id="navLinks">
@@ -34,8 +35,14 @@
                 <span class="hero-badge">
                     <em>●</em> Available for opportunities
                 </span>
-                <h1>Hi, I'm <strong class="gradient-text">Ntokozo Khanyile</strong></h1>
-                <p class="hero-subtitle">Building Secure Systems. Solving Real Problems. Growing Every Day.</p>
+                <!-- AFTER -->
+<!-- AFTER -->
+<h1 style="display: flex; align-items: center; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+  Hi, I'm <strong>Ntokozo Khanyile</strong>
+  <span class="weather-icon-wrapper" title="Always chasing sunny deployments ☀️">
+    <i class="fas fa-cloud-sun" id="hero-weather-icon"></i>
+  </span>
+</h1><p class="hero-subtitle">Building Secure Systems. Solving Real Problems. Growing Every Day.</p>
                 <aside class="hero-cta">
                     <a href="#projects" class="btn btn-primary">View My Work →</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
