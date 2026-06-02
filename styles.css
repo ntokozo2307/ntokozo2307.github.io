@@ -1251,3 +1251,21 @@ footer {
         scroll-behavior: auto;
     }
 }
+.weather-info {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.weather-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-weather-icon {
+    font-size: 1.5rem;
+    color: #fbbf24;
+    transition: all 0.3s ease;
+}
